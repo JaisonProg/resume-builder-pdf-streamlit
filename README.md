@@ -2,14 +2,15 @@
 
 A professional resume builder web app using Python and Streamlit that outputs clean, styled PDF resumes.
 
-<a href="https://resume-builder-pdf-streamlit.streamlit.app">
-  <img src="https://raw.githubusercontent.com/JaisonProg/resume-builder-pdf-streamlit/main/ResumebuilderPDFBanner.png" alt="Resume Builder PDF Banner" width="100%" />
+<a href="https://resume-builder-pdf-app-496r4wnhovaexkuxayzubf.streamlit.app/">
+  <img src="https://raw.githubusercontent.com/JaisonProg/resume-builder-pdf-streamlit/main/Resumebuilderpic.png" alt="Resume Builder PDF Banner" width="100%" />
 </a>
 
-[![View App](https://img.shields.io/badge/Streamlit-View_App-brightgreen?logo=streamlit)](https://resume-builder-pdf-streamlit.streamlit.app)
+[![View App](https://img.shields.io/badge/Streamlit-View_App-brightgreen?logo=streamlit)](https://resume-builder-pdf-app-496r4wnhovaexkuxayzubf.streamlit.app/)
 
 ##Live Demo  
-[Click here to use the app](https://resume-builder-pdf-streamlit.streamlit.app)
+[Click here to use the app](https://resume-builder-pdf-app-496r4wnhovaexkuxayzubf.streamlit.app/)
+
 
 
 # Resume Builder (Streamlit Version)
