@@ -60,10 +60,12 @@ if st.button("Generate PDF Resume"):
         pdf.section_body(skill_list)
 
     # Save PDF to bytes
-    pdf_output = pdf.output(dest="S").encode("latin-1", errors="ignore")
-    st.download_button(
-        label="Download PDF Resume",
-        data=pdf_output,
-        file_name=f"{full_name.replace(' ', '_').lower()}_resume.pdf",
-        mime="application/pdf"
-    )
+   #  pdf_output = pdf.output(dest="S").encode("latin-1", errors="ignore")
+   import tempfile
+
+with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmpfile:
+    pdf.output(tmpfile.name)
+    st.success("PDF generated successfully!")
+    with open(tmpfile.name, "rb") as file:
+        st.download_button(label="Download Resume as PDF", data=file, file_name="resume.pdf", mime="application/pdf")
+
