@@ -62,7 +62,7 @@ if st.button("Generate PDF Resume"):
 
     # Save PDF to bytes
    #  pdf_output = pdf.output(dest="S").encode("latin-1", errors="ignore")
-   import tempfile
+import tempfile
 
 with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmpfile:
     pdf.output(tmpfile.name)
