@@ -60,9 +60,9 @@ if st.button("Generate PDF Resume"):
         pdf.section_body(skill_list)
 
     # Save PDF to bytes
-    pdf_output = pdf.output(dest="S").encode("latin1")
+    pdf_output = pdf.output(dest="S").encode("latin-1", errors="ignore")
     st.download_button(
-        label="📄 Download PDF Resume",
+        label="Download PDF Resume",
         data=pdf_output,
         file_name=f"{full_name.replace(' ', '_').lower()}_resume.pdf",
         mime="application/pdf"
