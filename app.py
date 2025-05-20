@@ -55,31 +55,30 @@ class ResumePDF(FPDF):
 # === STREAMLIT INTERFACE ===
 st.title("Resume Builder (PDF Format)")
 
+# Personal Info
 full_name = st.text_input("Full Name")
 phone = st.text_input("Phone Number")
 email = st.text_input("Email Address")
 linkedin = st.text_input("LinkedIn URL")
 
-st.subheader("Professional Summary")
-summary = st.text_area("Enter a 2–4 line summary")
+# Summary
+summary = st.text_area("Professional Summary (2–4 lines)")
 
-st.subheader("Education")
+# Education
 degree = st.text_input("Degree (e.g. B.S. in CS)")
 school = st.text_input("School Name")
-school_location = st.text_input("Location")
+school_location = st.text_input("Education Location")
 grad_date = st.text_input("Graduation Date")
 
-st.subheader("Work Experience")
+# Experience
 exp_title = st.text_input("Job Title")
 exp_company = st.text_input("Company Name")
-exp_location = st.text_input("Location")
-exp_date = st.text_input("Date (e.g. Summer 2024)")
-exp_bullets_input = st.text_area("Responsibilities (one per line)")
-exp_bullets = exp_bullets_input.strip().split("\n")
+exp_location = st.text_input("Job Location")
+exp_date = st.text_input("Job Date (e.g. Summer 2024)")
+exp_bullets_input = st.text_area("Job Responsibilities (one per line)")
 
-st.subheader("Skills")
+# Skills
 skills_input = st.text_input("Skills (comma-separated)")
-skills_list = [s.strip() for s in skills_input.split(",") if s.strip()]
 
 # === PDF GENERATION ===
 if st.button("Generate Resume PDF"):
