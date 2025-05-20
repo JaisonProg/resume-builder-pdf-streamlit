@@ -76,6 +76,7 @@ exp_company = st.text_input("Company Name")
 exp_location = st.text_input("Job Location")
 exp_date = st.text_input("Job Date (e.g. Summer 2024)")
 exp_bullets_input = st.text_area("Job Responsibilities (one per line)")
+exp_bullets = exp_bullets_input.strip().split("\n")
 
 # Skills
 skills_input = st.text_input("Skills (comma-separated)")
