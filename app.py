@@ -80,6 +80,7 @@ exp_bullets = exp_bullets_input.strip().split("\n")
 
 # Skills
 skills_input = st.text_input("Skills (comma-separated)")
+skills_list = [s.strip() for s in skills_input.split(",") if s.strip()]
 
 # === PDF GENERATION ===
 if st.button("Generate Resume PDF"):
@@ -101,5 +102,5 @@ if st.button("Generate Resume PDF"):
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
         pdf.output(tmp.name)
         with open(tmp.name, "rb") as f:
-            st.download_button("📄 Download Resume PDF", f, file_name="resume.pdf", mime="application/pdf")
+            st.download_button("Download Resume PDF", f, file_name="resume.pdf", mime="application/pdf")
 
